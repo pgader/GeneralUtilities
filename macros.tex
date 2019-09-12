@@ -1,0 +1,281 @@
+%!TEX root = HyperspectralTextbook.tex
+   
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% MACROS %%%
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%% Demo of section head containing sample macro:
+    %% To get a macro to expand correctly in a section head, with upper and
+    %% lower case math, put the definition and set the box 
+    %% before \begin{document}, so that when it appears in the 
+    %% table of contents it will also work:
+    
+    \newcommand{\VT}[1]{\ensuremath{{V_{T#1}}}}
+    
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PDG MACROS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    %%%%%%%%%%%%%%%%%%%
+    %%% FORMATTING MACROS %%%
+    
+    \newcommand{\Ex}                   	{\vspace{6pt} \textbf{Example.   }}
+    
+    \newcommand{\SpecEx}           	{\vspace{6pt}\textbf{Spectral Example.   }}
+    
+    \newcommand{\Deriv}               	{\vspace{6pt}\textbf{Mathematical Derivation.   }}
+    
+    \newcommand{\Defn}[1]            	{\vspace{6pt}\textbf{Definition} of  \textbf{#1}.} 
+    
+    \newcommand{\Fact}      		{\vspace{6pt}\textbf{Fact}.}
+    
+    \newcommand{\Exercises}[3]    	{\begin{center}\textbf{\Large #1.\\} \vspace{6pt}
+                                                           \textbf{\Large #2 Problem Set #3.}\end{center} }
+                                                           
+\newcommand{\Project}[3]    	{\begin{center}\textbf{\Large Project #1\\ \vspace{6pt}}
+                                                           \textbf{\Large  #2\\ \vspace{6pt}}\textbf{\Large Due Date: #3.}
+                                                     \end{center} }
+                                                      
+                                                           
+    \newcommand{\Solutions}[3]    	{\textbf{\Large #1. #2 Problem Set #3.}\justify }
+    
+    \newcommand{\TestProblems}[2]  {\textbf{\Large #1 on #2} \vspace{24pt}\\
+                                                           Name\underline{\hspace{320pt}} \\ \\ \justify}
+                                                           
+    \newcommand{\RedText}[1]      	{\textcolor{red}{#1}}
+    \newcommand{\BlueText}[1]      	{\textcolor{blue}{#1}}
+    \newcommand{\OrangeText}[1] 	{\textcolor{orange}{#1}} 
+    
+    \newcommand{\MyCaption}[1] {\caption{\textit{#1}}}
+   
+   %%%%%%%%%%%%%%%%%%%
+    %%% MISC. MATH MACROS %%%
+    \newcommand{\Degrees}[1]		{{#1}^{\circ}}
+    \newcommand{\Set}[1]			{\mathcal{#1}}
+    \newcommand{\PowerSet}[1]		{2^{\Set{{#1}}}}
+    \newcommand{\Subspace}            {\sqsubset}
+    \newcommand{\ClosedInt}[2]		{\left[#1,#2\right]}
+    \newcommand{\OpenInt}[2]		{\left(#1,#2\right)}
+    \newcommand{\NChoosem}[2]	{
+       \begin{pmatrix*}
+          \vspace{6pt}
+         #1\\
+         #2\\ 
+       \end{pmatrix*}
+   }
+        
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%
+    %%% MACROS FOR VARIABLES %%%
+    
+    %%% LOWERCASE BOLD LETTERS %%%
+    \newcommand{\bfa}  	{\mathbf{a}}
+    \newcommand{\bfb}  	{\mathbf{b}}
+    \newcommand{\bfc}  	{\mathbf{c}}
+    \newcommand{\bfd}  	{\mathbf{d}}
+    \newcommand{\bfe}   {\mathbf{e}}
+    \newcommand{\bff}  	{\mathbf{f}}
+    \newcommand{\bfg}   {\mathbf{g}}
+    \newcommand{\bfh}  	{\mathbf{h}}
+    \newcommand{\bfi}  	{\mathbf{i}}
+    \newcommand{\bfj} 	{\mathbf{j}}
+    \newcommand{\bfk}  	{\mathbf{k}}
+    \newcommand{\bfl}  	{\mathbf{l}}
+    \newcommand{\bfm}  	{\mathbf{m}}
+    \newcommand{\bfn}  	{\mathbf{n}}
+    \newcommand{\bfo}  	{\mathbf{o}}
+    \newcommand{\bfp}  	{\mathbf{p}}
+    \newcommand{\bfq}  	{\mathbf{q}}
+    \newcommand{\bfr}   {\mathbf{r}}
+    \newcommand{\bfs}  	{\mathbf{s}}
+    \newcommand{\bft}   {\mathbf{t}}
+    \newcommand{\bfu}  	{\mathbf{u}}
+    \newcommand{\bfv}  	{\mathbf{v}}
+    \newcommand{\bfw} 	{\mathbf{w}}
+    \newcommand{\bfx}  	{\mathbf{x}}
+    \newcommand{\bfy}  	{\mathbf{y}}
+    \newcommand{\bfz}  	{\mathbf{z}}
+
+%%% UPPERCASE BOLD LETTERS %%%
+    \newcommand{\bfA}  	{\mathbf{A}}
+    \newcommand{\bfB}  	{\mathbf{B}}
+    \newcommand{\bfC}  	{\mathbf{C}}
+    \newcommand{\bfD}  	{\mathbf{D}}
+    \newcommand{\bfE}   	{\mathbf{E}}
+    \newcommand{\bfF}  	{\mathbf{F}}
+    \newcommand{\bfG}   	{\mathbf{G}}
+    \newcommand{\bfH}  	{\mathbf{H}}
+    \newcommand{\bfI}  	{\mathbf{I}}
+    \newcommand{\bfJ} 	{\mathbf{J}}
+    \newcommand{\bfK}  	{\mathbf{K}}
+    \newcommand{\bfL}  	{\mathbf{L}}
+    \newcommand{\bfM}  	{\mathbf{M}}
+    \newcommand{\bfN}  	{\mathbf{N}}
+    \newcommand{\bfO}  	{\mathbf{O}}
+    \newcommand{\bfP}  	{\mathbf{P}}
+    \newcommand{\bfQ}  	{\mathbf{Q}}
+    \newcommand{\bfR}   	{\mathbf{R}}
+    \newcommand{\bfS}  	{\mathbf{S}}
+    \newcommand{\bfT}   	{\mathbf{T}}
+    \newcommand{\bfU}  	{\mathbf{U}}
+    \newcommand{\bfV}  	{\mathbf{V}}
+    \newcommand{\bfW} 	{\mathbf{W}}
+     \newcommand{\bfX}  	{\mathbf{X}}
+     \newcommand{\bfY}  	{\mathbf{Y}}
+     \newcommand{\bfZ}  	{\mathbf{Z}}
+     
+     %%% LOWERCASE BOLD SYMBOLS %%%
+\newcommand{\bfalpha} 		{\boldsymbol{\alpha}}
+\newcommand{\bfbeta} 		{\boldsymbol{\beta}}
+\newcommand{\bfchi} 		{\boldsymbol{\chi}}
+\newcommand{\bfdelta} 		{\boldsymbol{\delta}}
+\newcommand{\bfepsilon} 	{\boldsymbol{\epsilon}}
+\newcommand{\bfphi} 		{\boldsymbol{\phi}}
+\newcommand{\bfgamma} 	{\boldsymbol{\gamma}}
+\newcommand{\bfeta} 		{\boldsymbol{\eta}}
+\newcommand{\bfiota} 		{\boldsymbol{\iota}}
+\newcommand{\bfkappa} 		{\boldsymbol{\kappa}}
+\newcommand{\bflambda} 	{\boldsymbol{\lambda}}
+\newcommand{\bfmu} 		{\boldsymbol{\mu}}
+\newcommand{\bfnu} 		{\boldsymbol{\nu}}
+\newcommand{\bfomicron} 	{\boldsymbol{\omicron}}
+\newcommand{\bfpi} 			{\boldsymbol{\pi}}
+\newcommand{\bftheta} 		{\boldsymbol{\theta}}
+\newcommand{\bfrho} 		{\boldsymbol{\rho}}
+\newcommand{\bfsigma} 		{\boldsymbol{\sigma}}
+\newcommand{\bftau} 		{\boldsymbol{\tau}}
+\newcommand{\bfupsilon} 	{\boldsymbol{\upsilon}}
+\newcommand{\bfomega} 		{\boldsymbol{\omega}}
+\newcommand{\bfxi} 			{\boldsymbol{\xi}}
+\newcommand{\bfpsi} 		{\boldsymbol{\psi}}
+\newcommand{\bfzeta} 		{\boldsymbol{\zeta}}
+
+     %%% UPPERCASE BOLD SYMBOLS %%%
+\newcommand{\bfAlpha} 		{\boldsymbol{\Alpha}}
+\newcommand{\bfBeta} 		{\boldsymbol{\Beta}}
+\newcommand{\bfChi} 		{\boldsymbol{\Chi}}
+\newcommand{\bfDelta} 		{\boldsymbol{\Delta}}
+\newcommand{\bfEpsilon} 	{\boldsymbol{\Epsilon}}
+\newcommand{\bfPhi} 		{\boldsymbol{\Phi}}
+\newcommand{\bfGamma} 	{\boldsymbol{\Gamma}}
+\newcommand{\bfEta} 		{\boldsymbol{\Eta}}
+\newcommand{\bfIota} 		{\boldsymbol{\Iota}}
+\newcommand{\bfKappa} 		{\boldsymbol{\Kappa}}
+\newcommand{\bfLambda} 	{\boldsymbol{\Lambda}}
+\newcommand{\bfMu} 		{\boldsymbol{\Mu}}
+\newcommand{\bfNu} 		{\boldsymbol{\Nu}}
+\newcommand{\bfOmicron} 	{\boldsymbol{\Omicron}}
+\newcommand{\bfPi} 		{\boldsymbol{\Pi}}
+\newcommand{\bfTheta} 		{\boldsymbol{\Theta}}
+\newcommand{\bfRho} 		{\boldsymbol{\Rho}}
+\newcommand{\bfSigma} 		{\boldsymbol{\Sigma}}
+\newcommand{\bfTau} 		{\boldsymbol{\Tau}}
+\newcommand{\bfUpsilon} 	{\boldsymbol{\Upsilon}}
+\newcommand{\bfOmega} 	{\boldsymbol{\Omega}}
+\newcommand{\bfXi} 		{\boldsymbol{\Xi}}
+\newcommand{\bfPsi} 		{\boldsymbol{\Psi}}
+\newcommand{\bfZeta} 		{\boldsymbol{\Zeta}}
+
+%%% CALLIGRAPHIC UPPERCASE LETTERS %%%
+
+\newcommand{\calL}			{\mathcal{L}}
+   
+    \newcommand{\bfVec}[1]{\mathbf{#1}}
+       
+    
+    %Spectral Macros
+    \newcommand{\Spectra}{\textbf{X }}
+    
+    %Statistical Macros
+    \newcommand{\RandVec}[1]{\textbf{\textit{#1}}}
+    \newcommand{\Mean}{\mathbf{\mu}}
+    \newcommand{\SampMean}{\mathbf{\bar{\mu}}}
+    \newcommand{\Cov}{\mathbf{C}}
+    \newcommand{\SampCov}{\mathbf{\bar{C}}}
+    \newcommand{\PCT}{\text{PCT}}
+    \newcommand{\PCA}{\text{PCA}}
+    \newcommand{\ExpVal}{\mathbb{E}}
+    
+    %Linear Algebra Macros
+    \newcommand{\ColVec}[2]{
+    \left[
+    \begin{matrix} 
+    \vspace{3pt}
+    \; \text{          }#1_1\\
+    \vspace{3pt}
+    \;  \text{          }#1_2\\ 
+    \vspace{3pt}
+    \; \text{          }\vdots\\
+    \vspace{3pt}
+     \; \text{          }#1_#2
+     \vspace{0pt}
+    \end{matrix}
+    \right]}
+    
+     \newcommand{\VTwoD}[2]{
+    \left[
+    \begin{matrix*}[r]
+    \vspace{6pt}
+    \; \text{          }#1\\
+    \;  \text{          }#2\\ 
+    \end{matrix*}
+    \right]}
+
+   
+    \newcommand{\VThreeD}[3]{
+    \left[
+    \begin{matrix*}[r]
+    \vspace{3pt}
+    \; \text{          }#1\\
+    \vspace{3pt}
+    \;  \text{          }#2\\ 
+        \vspace{3pt}
+     \; \text{          }#3
+     \vspace{0pt}
+    \end{matrix*}
+    \right]}
+
+    
+     \newcommand{\RowVec}[2]{
+    \left[#1_1,#1_2,\dots,#1_#2 \right]^t }
+
+    \newcommand{\GenMatrix}[4]{ #1=
+    \begin{bmatrix}
+          \vspace{6pt}
+          \;  &#2_{11} & #2_{12}  & \ldots &#2_{1#4}\\
+          \vspace{6pt}
+           \;  &#2_{21}  & #2_{22} & \ldots &#2_{2#4}\\
+           \vspace{3pt}
+           \;  &\vdots & \vdots & \ddots & \vdots\\
+           \vspace{3pt}
+            \;  &#2_{#3 1}  &  #2_{#3 2}       &\ldots &#2_{#3 #4}
+       \end{bmatrix}}
+ 
+%%%  END CREATE GENERIC MATRIX   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%    
+    \newcommand{\SetOfVecs}[2]{
+    \{\bfVec{#1}_1,\bfVec{#1}_2,\dots,\bfVec{#1}_{#2} \}
+    }
+    
+    \newcommand{\norm}[1]   {\lVert\mathbf{#1}\rVert}
+    \newcommand{\pnorm}[1] {\lVert\mathbf{#1}\rVert_p}
+    \newcommand{\by}{\mathsf{x}}
+    
+
+%%% Algorithms
+
+\newenvironment{Algorithm}{\fontfamily{pcr}\selectfont}{\par}
+    
+%%% END PDG MACROS %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    
+    %% use a box to expand the macro before we put it into the section head:
+    
+    \newbox\sectsavebox
+    \setbox\sectsavebox=\hbox{\boldmath\VT{xyz}}
+    
+    %%%%%%%%%%%%%%%%% End Demo
+    
+    %%% END MACROS %%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
